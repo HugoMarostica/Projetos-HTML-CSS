@@ -1,0 +1,60 @@
+* { /* Aqui nós resetamos as dimensões para ficar padrão em qualquer browser */
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box;  /* Isso garante que a largura e altura dos elementos filhos sejam calculadas incluindo bordas e paddings, evitando que eles ultrapassem os limites do body. */
+}
+
+body {
+    height: 100vh;  /* VIEWPORT HEIGHT - faz o body preencher todo o espaço de tela para o conteúdo da página */
+    background-color: black;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: white;
+}
+
+strong {
+    color: rgb(0, 204, 255);
+}
+
+img {
+    width: 300px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    background-color: rgb(0, 204, 255);
+    width: 200px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.destaque_nome {
+    color: rgb(0, 204, 255);
+}
+
+.apresentacao {  /*  Puxa todos os elementos do main */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centraliza */
+
+    gap: 50px; /* espaço entre texto e imagem */
+
+    max-width: 1000px; /* limita largura */
+    margin: 0 auto;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 350px; /* evita texto gigante */
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
