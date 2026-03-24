@@ -1,3 +1,87 @@
-body {
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); /*IMPORTAÇÃO DE FONTA - GOOGLE FONTS*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    background-color: #000000;
+    color: #F6F6F6;
+}
+
+strong {
+    color: #22D4FD;
+}
+
+.imagem {
+    width: 400px;   /* tamanho fixo */
+    height: auto;
+    object-fit: cover;
+    border-radius: 50px;
+    border: 2px solid #22D4FD;
+}
+
+.apresentacao{
+    margin: 10% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.apresentacao__conteudo {
+    max-width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;  /*GAP funcionou dps da aplicação da FlexBox*/
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 36px;
+    font-family: 'Krona One', sans-serif;
+}
+
+.apresentacao__conteudo_texto {
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.apresentacao__conteudo__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+}
+
+.apresentacao__conteudo__links__link {
+    color: #f6f6f6;
+    border: 2px solid #22D4FD;
+
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+
+    border-radius: 8px;
+    width: 350px;
+    padding: 21.5px 0;  /*AQUI DEFINIMOS O PADDING DA VERTICAL E DPS DA HORIZONTAL*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.apresentacao__conteudo__links__link:hover {    /* :hover -> SERVE PARA MODIFICAR O BOTÃO QUANDO O CURSOS PASSAR POR CIMA */
+    background-color: #272727;
+}
+
+.apresentacao__conteudo__links__subtitulo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
 }
