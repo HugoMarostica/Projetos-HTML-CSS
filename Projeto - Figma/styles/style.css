@@ -31,20 +31,18 @@ body{
 
 .cabecalho {
     padding: 2% 0% 0% 15%;
-    margin-left: 7%;
-    margin-top: 2%;
 }
 
 .cabecalho__menu {
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 5rem;
 }
 
 .cabecalho__menu__link {
     color: var(--third-color);
 
-    font-size: 20px;
+    font-size: 1.25rem;
     text-decoration: none;
     font-family: var(--second-font);
 }
@@ -68,7 +66,7 @@ strong {
 }
 
 .apresentacao__conteudo {
-    max-width: 615px;
+    max-width: 50%;
 
     display: flex;
     flex-direction: column;
@@ -77,12 +75,12 @@ strong {
 }
 
 .apresentacao__conteudo__titulo {
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--main-font);
 }
 
 .apresentacao__conteudo_texto {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--second-font);
     text-align: justify;
     text-justify: auto;
@@ -97,18 +95,18 @@ strong {
     gap: 38px;
 }
 
-.apresentacao__conteudo__links__link {
+.apresentacao__conteudo__links__navegacao {
     color: var(--second-color);
     border: 2px solid var(--third-color);
 
     text-decoration: none;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     font-family: var(--second-font);
 
     border-radius: 8px;
-    width: 350px;
+    width: 100%;
     padding: 21.5px 0;  /*AQUI DEFINIMOS O PADDING DA VERTICAL E DPS DA HORIZONTAL*/
 
     display: flex;
@@ -127,8 +125,12 @@ strong:hover {         /* :hover -> SERVE PARA MODIFICAR O BOTÃO QUANDO O CURSO
 
 .apresentacao__conteudo__links__subtitulo {
     font-family: var(--second-font);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
+}
+
+.apresentacao__imagem {
+    width: 50%;
 }
 
 /*-----------------------------------------------------------*/
@@ -137,10 +139,31 @@ strong:hover {         /* :hover -> SERVE PARA MODIFICAR O BOTÃO QUANDO O CURSO
     background-color: var(--third-color);
     color: var(--main-color);
     
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
     font-family: var(--second-font);
 
-    padding: 24px;
+    padding: 1.5rem;
+}
+
+/* 
+O @media é uma regra CSS que nos permite aplicar estilos diferentes com base nas características do dispositivo que está sendo usado para visualizar a página 
+Quando você usa @media (max-width: 1200px), você está dizendo: "Se a largura da tela for de no máximo 1200 pixels, aplique os estilos que estão dentro deste bloco de código".
+Quanto mais media queries bem planejadas você tiver, mais responsiva e adaptável sua aplicação será para os diversos dispositivos que a acessam.
+*/
+
+@media (max-width: 1200px) { 
+
+    .cabecalho {
+        padding: 10%;
+    }
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;  /* Inverte a ordem de Imagem/Texto */
+    }
+
 }
